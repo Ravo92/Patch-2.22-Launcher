@@ -110,6 +110,7 @@
             this.Controls.Add(this.BtnGameInstallFolder);
             this.Controls.Add(this.BtnOpenAppDataFolder);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Advanced";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Easy Access Options.";

@@ -47,7 +47,6 @@ namespace PatchLauncher
             this.BtnInstall = new System.Windows.Forms.Button();
             this.LblFileName = new System.Windows.Forms.Label();
             this.PibLoadingRing = new System.Windows.Forms.PictureBox();
-            this.LblPatchNotes = new Helper.CustomLabel();
             this.PibLoadingBorder = new System.Windows.Forms.PictureBox();
             this.Wv2Patchnotes = new Microsoft.Web.WebView2.WinForms.WebView2();
             this.PiBTwitch = new System.Windows.Forms.PictureBox();
@@ -66,9 +65,6 @@ namespace PatchLauncher
             this.PiBVersion222_1 = new System.Windows.Forms.PictureBox();
             this.PiBVersion106 = new System.Windows.Forms.PictureBox();
             this.PiBVersion103 = new System.Windows.Forms.PictureBox();
-            this.LblInstalledMods = new Helper.CustomLabel();
-            this.LblInstalledPatches = new Helper.CustomLabel();
-            this.LblModExplanation = new Helper.CustomLabel();
             this.SysTray = new System.Windows.Forms.NotifyIcon(this.components);
             this.NotifyContextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.MenuItemLaunchGame = new System.Windows.Forms.ToolStripMenuItem();
@@ -290,21 +286,6 @@ namespace PatchLauncher
             this.PibLoadingRing.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PibLoadingRing.TabIndex = 18;
             this.PibLoadingRing.TabStop = false;
-            // 
-            // LblPatchNotes
-            // 
-            this.LblPatchNotes.AutoSize = true;
-            this.LblPatchNotes.BackColor = System.Drawing.Color.Transparent;
-            this.LblPatchNotes.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.LblPatchNotes.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.LblPatchNotes.ForeColor = System.Drawing.SystemColors.Control;
-            this.LblPatchNotes.Location = new System.Drawing.Point(544, 488);
-            this.LblPatchNotes.Name = "LblPatchNotes";
-            this.LblPatchNotes.OutlineForeColor = System.Drawing.Color.Black;
-            this.LblPatchNotes.OutlineWidth = 4F;
-            this.LblPatchNotes.Size = new System.Drawing.Size(231, 25);
-            this.LblPatchNotes.TabIndex = 19;
-            this.LblPatchNotes.Text = "Loading Patch-Notes...";
             // 
             // PibLoadingBorder
             // 
@@ -549,42 +530,6 @@ namespace PatchLauncher
             this.PiBVersion103.TabStop = false;
             this.PiBVersion103.Click += new System.EventHandler(this.PiBVersion103_Click);
             // 
-            // LblInstalledMods
-            // 
-            this.LblInstalledMods.AutoSize = true;
-            this.LblInstalledMods.Font = new System.Drawing.Font("Segoe UI", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.LblInstalledMods.Location = new System.Drawing.Point(1030, 50);
-            this.LblInstalledMods.Name = "LblInstalledMods";
-            this.LblInstalledMods.OutlineForeColor = System.Drawing.Color.Black;
-            this.LblInstalledMods.OutlineWidth = 4F;
-            this.LblInstalledMods.Size = new System.Drawing.Size(108, 47);
-            this.LblInstalledMods.TabIndex = 41;
-            this.LblInstalledMods.Text = "Mods";
-            // 
-            // LblInstalledPatches
-            // 
-            this.LblInstalledPatches.AutoSize = true;
-            this.LblInstalledPatches.Font = new System.Drawing.Font("Segoe UI", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.LblInstalledPatches.Location = new System.Drawing.Point(60, 50);
-            this.LblInstalledPatches.Name = "LblInstalledPatches";
-            this.LblInstalledPatches.OutlineForeColor = System.Drawing.Color.Black;
-            this.LblInstalledPatches.OutlineWidth = 4F;
-            this.LblInstalledPatches.Size = new System.Drawing.Size(138, 47);
-            this.LblInstalledPatches.TabIndex = 28;
-            this.LblInstalledPatches.Text = "Patches";
-            // 
-            // LblModExplanation
-            // 
-            this.LblModExplanation.AutoSize = true;
-            this.LblModExplanation.Font = new System.Drawing.Font("Segoe UI", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.LblModExplanation.Location = new System.Drawing.Point(110, 612);
-            this.LblModExplanation.Name = "LblModExplanation";
-            this.LblModExplanation.OutlineForeColor = System.Drawing.Color.Black;
-            this.LblModExplanation.OutlineWidth = 4F;
-            this.LblModExplanation.Size = new System.Drawing.Size(945, 47);
-            this.LblModExplanation.TabIndex = 29;
-            this.LblModExplanation.Text = "Here you can choose which mod or patch you want to play.";
-            // 
             // SysTray
             // 
             this.SysTray.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info;
@@ -661,18 +606,14 @@ namespace PatchLauncher
             this.ClientSize = new System.Drawing.Size(1280, 720);
             this.Controls.Add(this.PibMute);
             this.Controls.Add(this.BtnAdvanced);
-            this.Controls.Add(this.LblInstalledMods);
             this.Controls.Add(this.PiBArrow);
             this.Controls.Add(this.PiBTwitch);
-            this.Controls.Add(this.LblPatchNotes);
             this.Controls.Add(this.LblFileName);
             this.Controls.Add(this.BtnInstall);
             this.Controls.Add(this.LblBytes);
             this.Controls.Add(this.LblDownloadSpeed);
             this.Controls.Add(this.PBarActualFile);
             this.Controls.Add(this.BtnOptions);
-            this.Controls.Add(this.LblModExplanation);
-            this.Controls.Add(this.LblInstalledPatches);
             this.Controls.Add(this.BtnLaunch);
             this.Controls.Add(this.PiBThemeSwitcher);
             this.Controls.Add(this.PiBModDB);
